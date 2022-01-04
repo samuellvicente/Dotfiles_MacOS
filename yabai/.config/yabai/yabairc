@@ -1,0 +1,67 @@
+#!/usr/bin/env sh
+
+# global settings
+yabai -m config external_bar                 all:17:0
+
+yabai -m config mouse_follows_focus          on
+yabai -m config focus_follows_mouse          autoraise
+
+yabai -m config window_placement             second_child
+yabai -m config window_shadow                off
+yabai -m config window_topmost               on
+
+yabai -m config window_border                on
+yabai -m config window_border_width          4
+yabai -m config active_window_border_color   0xff8e6f57
+yabai -m config normal_window_border_color   0xff625e55
+
+yabai -m config insert_window_border_color   0xffd75f5f
+
+yabai -m config split_ratio                  0.50
+yabai -m config auto_balance                 off
+yabai -m config mouse_modifier               ctrl
+yabai -m config mouse_action1                move
+yabai -m config mouse_action2                resize
+
+# general space settings
+yabai -m config layout                       bsp
+yabai -m config top_padding                  0
+yabai -m config bottom_padding               0
+yabai -m config left_padding                 0
+yabai -m config right_padding                0
+yabai -m config window_gap                   0
+
+# Float Windows
+yabai -m rule --add app=Finder manage=off
+yabai -m rule --add app=MacPass manage=off sticky=on window --grid 4:8:5:1:8:2
+yabai -m rule --add app=System Preferences manage=off
+yabai -m rule --add app=The\ Unarchiver manage=off
+yabai -m rule --add app=System\ Preferences manage=off
+yabai -m rule --add app=python3 manage=off
+
+#Display 1
+yabai --add event=application_launched action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"left-coffee\"'"
+yabai --add event=application_terminated action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"left-coffee\"'"
+yabai --add event=window_created action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"left-coffee\"'"
+yabai --add event=window_destroyed action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"left-coffee\"'"
+yabai --add event=window_focused action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"left-coffee\"'"
+yabai --add event=window_title_changed action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"left-coffee\"'"
+
+#Display 2
+yabai --add event=application_launched action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"left1-coffee\"'"
+yabai --add event=application_terminated action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"left1-coffee\"'"
+yabai --add event=window_created action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"left1-coffee\"'"
+yabai --add event=window_destroyed action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"left1-coffee\"'"
+yabai --add event=window_focused action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"left1-coffee\"'"
+yabai --add event=window_title_changed action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"left1-coffee\"'"
+
+# window rules
+# yabai -m rule --add app="^Mail$" space=1
+# yabai -m rule --add app="^Spotify$" space=2
+# yabai -m rule --add app="^Discord$" space=3
+# yabai -m rule --add app="^WhatsApp$" space=4
+# yabai -m rule --add app="^Chromium$" space=5
+# yabai -m rule --add app="^VLC$" border=off
+
+
+echo "yabai configuration loaded.."

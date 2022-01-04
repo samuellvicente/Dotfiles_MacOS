@@ -1,0 +1,22 @@
+command: """
+./scripts/weather.sh
+"""
+
+refreshFrequency: 600000
+
+style: """
+  top: 1px
+  left: 2px
+  right: 2px
+  color: #0e1610
+
+  .output
+    font-family: JetBrainsMonoMedium Nerd Font Mono
+    font-size: 12px
+    text-align: center
+    font-weight: 100
+"""
+
+render: (output) -> """
+  <div class="output">#{output}</div>
+"""

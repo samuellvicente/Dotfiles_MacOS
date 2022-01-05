@@ -1,5 +1,5 @@
 command: """
-./scripts/right.sh
+./right.sh
 """
 
 refreshFrequency: 10000

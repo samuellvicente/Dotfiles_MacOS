@@ -1,5 +1,5 @@
 command: """
-./scripts/window.sh 1
+./window.sh 1
 """
 
 refreshFrequency: 500

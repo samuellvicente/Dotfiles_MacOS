@@ -10,6 +10,8 @@
 * Yabai
 * Vifm
 * Übersicht 
+* Mpv
+* Zathura
 
 ## Installing
 

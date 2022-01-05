@@ -1,0 +1,14 @@
+# open zathura without hassle
+z(){
+        (zathura $@ &) >/dev/null 2>&1
+}
+ 
+# open mpv without hassle
+m(){
+        (mpv $@ &) >/dev/null 2>&1
+}
+ 
+# kubectl
+#k(){
+#        kubectl $@
+#}

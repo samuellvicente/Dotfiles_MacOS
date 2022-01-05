@@ -12,6 +12,9 @@
 * Übersicht 
 * Mpv
 * Zathura
+* Tmux
+* Spotify-TUI
+* Spotifyd
 
 ## Installing
 

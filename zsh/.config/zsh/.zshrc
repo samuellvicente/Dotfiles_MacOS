@@ -1,13 +1,6 @@
 # Zsh cache directory
 ZCACHE=$HOME/.local/share/zsh
 
-# Enable colors and change prompt:
-autoload -U colors && colors	# Load colors
-PROMPT="%B%F{magenta}%~ %F{yellow}%(!.%(?.%F{yellow}#.%F{red}#).%(?.%F{yellow}$.%F{red}$)) %f%b"
-
-# Disable ctrl-s to freeze terminal.
-stty stop undef
-
 # History file configuration
 HISTSIZE=10000000
 SAVEHIST=10000000
@@ -22,11 +15,41 @@ setopt interactive_comments
 setopt complete_in_word
 setopt hist_save_no_dups 
 setopt share_history
-
+setopt prompt_subst
 # Quick jump for recent directories
 setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
 setopt PUSHD_SILENT
+
+# Disable ctrl-s to freeze terminal.
+stty stop undef
+
+# Enable colors and change left prompt:
+autoload -U colors && colors	# Load colors
+PROMPT="%B%F{magenta}%~ %F{yellow}%(!.%(?.%F{yellow}#.%F{red}#).%(?.%F{yellow}$.%F{red}$)) %f%b"
+
+# Enable git info TODO
+#autoload -Uz vcs_info
+#zstyle ':vcs_info:*' enable git # just git
+#
+## add a function to check for untracked files in the directory.
+#zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+## 
+#+vi-git-untracked(){
+#    if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
+#        git status --porcelain | grep '??' &> /dev/null ; then
+#        hook_com[staged]+='!' # signify new files with a bang
+#    fi
+#}
+#
+#zstyle ':vcs_info:*' check-for-changes true
+## zstyle ':vcs_info:git:*' formats " %r/%S %b %m%u%c "
+#zstyle ':vcs_info:git:*' formats "%m %u %c %b %r"
+#
+#precmd_vcs_info() { vcs_info }
+#precmd_functions+=( precmd_vcs_info )
+#
+#RPROMPT=\$vcs_info_msg_0_
 
 # Load aliases and functions
 [ -f "$ZDOTDIR/zsh-aliases" ] && source "$ZDOTDIR/zsh-aliases"
@@ -52,8 +75,10 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
 # Faster than going to normal mode:
-bindkey '^k' up-history
-bindkey '^j' down-history
+bindkey '^p' up-history
+bindkey '^n' down-history
+bindkey '^k' up-line-or-search
+bindkey '^j' down-line-or-search
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select () {

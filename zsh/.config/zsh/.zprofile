@@ -1,13 +1,9 @@
 # History files 
 export LESSHISTFILE=$HOME/.local/share/less/.lesshst
 
-# Default programs
-export EDITOR="nvim"
-export VISUAL="nvim"
-export TERMINAL="kitty"
-export LANG=en_GB.UTF-8
-export LC_ALL=pt_PT.UTF-8
-
+# Locale settings irish english offers best settings
+export LANG=en_IE.UTF-8
+export LC_ALL=en_IE.UTF-8
 
 # HomeBrew options
 export HOMEBREW_CASK_OPTS=--no-quarantine

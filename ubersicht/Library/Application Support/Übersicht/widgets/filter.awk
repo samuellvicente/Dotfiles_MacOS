@@ -57,7 +57,9 @@ BEGIN {
   else if ($3 ~ /mpv/){
     $3=$NF=$(NF-1)="";
     r=$0
-
+  }
+  else if ($3 ~ /qBittorrent/){
+    r=$3
   }
   else if ($3 ~ /zoom.us/){
     $0="";

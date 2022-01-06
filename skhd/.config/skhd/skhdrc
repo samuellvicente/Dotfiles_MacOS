@@ -1,7 +1,7 @@
 cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~
 cmd - j : open "https://duckduckgo.com/?q=$(pbpaste)"
 cmd - h : open "$(pbpaste)"
-cmd - k : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ vifm
+cmd - k : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ zsh --login -c vifm
 
 
 cmd - u : open -a Google\ Chrome "https://meet.jit.si/MassiveMethodologiesFaceEfficiently"

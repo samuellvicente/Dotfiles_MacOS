@@ -3,7 +3,7 @@ ZCACHE=$HOME/.local/share/zsh
 
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
-PS1="%B%{$fg[magenta]%}%~ %{$reset_color%}$ %b"
+PROMPT="%B%F{magenta}%~ %F{yellow}%(!.%(?.%F{yellow}#.%F{red}#).%(?.%F{yellow}$.%F{red}$)) %f%b"
 
 # Disable ctrl-s to freeze terminal.
 stty stop undef

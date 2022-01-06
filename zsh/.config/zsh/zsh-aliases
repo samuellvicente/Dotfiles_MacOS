@@ -1,25 +1,36 @@
 # Verbosity and confirmation
-alias cp="cp -iv"
-alias mv="mv -iv"
-alias rm="rm -iv"
-alias mkd="mkdir -pv"
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias mkd='mkdir -pv'
 
 # Color commands
-alias ls="ls -GA"
-alias grep="grep --color=auto"
-alias ccat="highlight --out-format=ansi"
-
+alias ls='ls -GA1'
+alias ll='ls -GAlh'
+alias grep='grep --color=auto'
+alias ccat='highlight --out-format=ansi'
 
 # Nvim for diff
-alias diff="nvim -d"
+alias diff='nvim -d'
 
 # General aliases
-alias v="$EDITOR"
-alias s="kitty +kitten ssh"
-alias t="tmux a || tmux"
-alias icat="kitty +kitten icat"
-alias wget="wget --no-hsts"
+alias v='$EDITOR'
+alias s='kitty +kitten ssh'
+alias t='tmux a || tmux'
+alias icat='kitty +kitten icat'
+alias wget='wget --no-hsts'
 
 # Quick jump for recent directories
 alias d='dirs -v'
-for index ({1..9}) alias "$index"="cd +${index}"; unset index
+for index ({1..9}) alias '$index'='cd +${index}'; unset index
+
+# Git
+alias gu='git add -u'
+alias ga='git add -A'
+alias gs='git status -sb'
+alias gps='git push'
+alias gpl='git pull'
+alias gcm='git commit -m '
+gc() {
+	[[ -n "$1" ]] && git commit -m "$1" || git commit -m "update"
+}

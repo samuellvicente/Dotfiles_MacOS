@@ -10,6 +10,3 @@ export HOMEBREW_CASK_OPTS=--no-quarantine
 
 # Homebrew sbin in path
 export PATH="/usr/local/sbin:$PATH"
-
-# Wgetrc
-#export WGETRC=$HOME/.config/wget/.wgetrc

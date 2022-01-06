@@ -6,15 +6,17 @@
 
 * Karabiner-Elements
 * Kitty
-* Skhd
-* Yabai
-* Vifm
-* Übersicht 
 * Mpv
-* Zathura
-* Tmux
+* Skhd
 * Spotify-TUI
 * Spotifyd
+* Tmux
+* Übersicht 
+* Vifm
+* Yabai
+* Zathura
+* Zsh
+
 
 ## Installing
 

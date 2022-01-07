@@ -5,6 +5,17 @@
 local PKGS = {
   "savq/paq-nvim";
   --"neovim/nvim-lspconfig";
+
+  -- Completion plugins
+  "hrsh7th/nvim-cmp";
+  "hrsh7th/cmp-nvim-lsp";
+  "hrsh7th/cmp-buffer";
+  "hrsh7th/cmp-path";
+  "onsails/lspkind-nvim";
+  --"ukas-reineke/cmp-under-comparator";
+  --"hrsh7th/cmp-nvim-lua";
+  "hrsh7th/cmp-cmdline";
+  --"saadparwaiz1/cmp_luasnip";
 }
 
 -- Automatically install paq

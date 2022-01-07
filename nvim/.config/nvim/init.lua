@@ -9,3 +9,9 @@ require 'user/plugins'
 
 -- Add colorscheme
 require 'user/colorscheme'
+
+-- Add completion
+require 'user/completion'
+
+-- Add autocommands
+require 'user/autocommands'

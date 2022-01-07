@@ -6,7 +6,7 @@ local PKGS = {
   "savq/paq-nvim";
 
   -- LSP
-  --"neovim/nvim-lspconfig";
+  "neovim/nvim-lspconfig";
 
 
   -- Completion plugins
@@ -25,6 +25,10 @@ local PKGS = {
   { "nvim-treesitter/nvim-treesitter", run = function() cmd 'TSUpdate' end };
   "p00f/nvim-ts-rainbow";
   --"windwp/nvim-ts-autotag";
+
+
+  -- Random stuff
+  --"dstein64/vim-startuptime";
 }
 
 -- Automatically install paq

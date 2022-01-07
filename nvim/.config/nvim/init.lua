@@ -18,3 +18,6 @@ require 'user/autocommands'
 
 -- Add treesitter
 require 'user/treesitter'
+
+-- Add lsp
+require 'user/lsp'

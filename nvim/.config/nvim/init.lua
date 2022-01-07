@@ -15,3 +15,6 @@ require 'user/completion'
 
 -- Add autocommands
 require 'user/autocommands'
+
+-- Add treesitter
+require 'user/treesitter'

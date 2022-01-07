@@ -4,18 +4,27 @@
 -- Packages to be managed
 local PKGS = {
   "savq/paq-nvim";
+
+  -- LSP
   --"neovim/nvim-lspconfig";
+
 
   -- Completion plugins
   "hrsh7th/nvim-cmp";
   "hrsh7th/cmp-nvim-lsp";
   "hrsh7th/cmp-buffer";
   "hrsh7th/cmp-path";
+  "hrsh7th/cmp-cmdline";
   "onsails/lspkind-nvim";
   --"ukas-reineke/cmp-under-comparator";
   --"hrsh7th/cmp-nvim-lua";
-  "hrsh7th/cmp-cmdline";
   --"saadparwaiz1/cmp_luasnip";
+
+
+  -- Treesitter plugins
+  { "nvim-treesitter/nvim-treesitter", run = function() cmd 'TSUpdate' end };
+  "p00f/nvim-ts-rainbow";
+  --"windwp/nvim-ts-autotag";
 }
 
 -- Automatically install paq

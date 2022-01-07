@@ -13,8 +13,9 @@ end
 
 
 -- Global setup
-cmp.setup {
-  --
+cmp.setup({
+
+
   -- Mapping:
   mapping = {
     ["<C-d>"] = cmp.mapping.scroll_docs(-4),
@@ -36,7 +37,8 @@ cmp.setup {
     ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
     ["<Tab>"] = cmp.config.disable,
   },
-  --
+
+
   -- Sources
   sources = {
     { name = "nvim_lsp" },
@@ -44,7 +46,8 @@ cmp.setup {
     { name = "path" },
     --{ name = "luasnip" },
   },
-  --
+
+
   -- Sorting
   sorting = {
     comparators = {
@@ -58,7 +61,8 @@ cmp.setup {
       cmp.config.compare.order,
     },
   },
-  --
+
+
   -- Formatting
   formatting = {
     format = lspkind.cmp_format {
@@ -72,32 +76,37 @@ cmp.setup {
       },
     },
   },
-  --
+
+
   -- Completion box look
   completion = { 
     border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }, 
     scrollbar = "║" 
   },
-  --
+
+
   -- Documentation box look
   documentation = {
     border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
     scrollbar = "║",
   },
-  --
+
+
   -- Experimental
   experimental = {
     ghost_text = true,
     native_menu = false,
   },
-  --
+
+
   -- Snippets
   --snippet = {
   --  expand = function(args)
   --    luasnip.lsp_expand(args.body) -- For `luasnip` users.
   --  end,
   --},
-}
+})
+
 
 -- Use buffer source for `/`
 cmp.setup.cmdline('/', {
@@ -114,5 +123,3 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline', keyword_length = 3 }
   })
 })
-
-

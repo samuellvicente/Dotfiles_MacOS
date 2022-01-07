@@ -31,6 +31,9 @@ alias ga='git add -A; git status -sb'
 alias gps='git push'
 alias gpl='git pull'
 alias gcm='git commit -m '
+gad() {
+  git add "$1" && git status -sb
+}
 gc() {
-	[[ -n "$1" ]] && git commit -m "$1" || git commit -m "update"
+  [[ -n "$1" ]] && git commit -m "$1" || git commit -m "update"
 }

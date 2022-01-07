@@ -36,4 +36,4 @@ end
 
 -- Read and install packages
 paq(PKGS)
-paq.install()
+--paq.install()

@@ -143,7 +143,12 @@ alt - s : yabai -m window --toggle float;\
           yabai -m window --toggle sticky;\
           yabai -m window --grid 4:4:1:1:2:2
 
-# toggle sticky(+float), topmost, picture-in-picture
-alt - p : yabai -m window --toggle sticky;\
-      yabai -m window --toggle topmost;\
-      yabai -m window --toggle pip
+# toggle gaps
+alt - g : yabai -m space --toggle gap;\
+          yabai -m space --toggle padding
+
+# toggle sticky(+float), topmost, picture-in-picture FIXME: bugged
+#alt - p : yabai -m window --toggle sticky;\
+#      yabai -m window --toggle topmost;\
+#      yabai -m window --toggle pip
+

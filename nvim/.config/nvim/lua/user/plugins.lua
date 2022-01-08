@@ -7,6 +7,7 @@ local PKGS = {
 
   -- LSP
   "neovim/nvim-lspconfig";
+  "williamboman/nvim-lsp-installer";
 
 
   -- Completion plugins

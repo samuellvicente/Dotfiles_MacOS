@@ -22,7 +22,7 @@ alias wget='wget --no-hsts'
 
 # Quick jump for recent directories
 alias d='dirs -v'
-for index ({1..9}) alias '$index'='cd +${index}'; unset index
+for index ({0..9}) alias "$index"="cd +${index}"; unset index
 
 # Git
 alias gs='git status -sb'

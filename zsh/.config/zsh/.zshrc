@@ -53,6 +53,7 @@ PROMPT="%B%F{magenta}%~ %F{yellow}%(!.%(?.%F{yellow}#.%F{red}#).%(?.%F{yellow}$.
 
 # Load aliases and functions
 [ -f "$ZDOTDIR/zsh-aliases" ] && source "$ZDOTDIR/zsh-aliases"
+[ -f "$ZDOTDIR/zsh-local-aliases" ] && source "$ZDOTDIR/zsh-local-aliases"
 [ -f "$ZDOTDIR/zsh-functions" ] && source "$ZDOTDIR/zsh-functions"
 
 # Basic auto/tab complete:

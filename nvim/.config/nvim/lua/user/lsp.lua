@@ -12,7 +12,6 @@ function M.show_line_diagnostics()
 end
 
 local custom_attach = function(client, bufnr)
-  print("loading")
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local opts = { noremap = true, silent = false }
 
@@ -29,7 +28,7 @@ local custom_attach = function(client, bufnr)
   buf_set_keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
   buf_set_keymap("n", "<leader>q", "<cmd>lua vim.diagnostic.setqflist({open = true})<CR>", opts)
   buf_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-  buf_set_keymap('n', "<leader>e", '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+  --buf_set_keymap('n', "<leader>e", "<cmd>lua require('user.lsp').show_line_diagnostics()<CR>", opts)
 
   vim.cmd([[ autocmd CursorHold <buffer> lua require('user.lsp').show_line_diagnostics() ]])
 
@@ -46,6 +45,7 @@ if not status_ok then
 end
 
 local capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local status_ok, lspconfig = pcall(require, "lspconfig")
 if not status_ok then
@@ -73,7 +73,7 @@ lspconfig.ccls.setup {
     debounce_text_changes = 150,
   },
   init_options = {
-    compilationDatabaseDirectory = "platformio/wiring-blink/.pio/build/uno";
+    compilationDatabaseDirectory = ".pio/build/uno";
     index = {
       threads = 0;
     };
@@ -113,10 +113,12 @@ vim.diagnostic.config({
 })
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+  close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
   border = "rounded",
 })
 
 vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+  close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
   border = "rounded",
 })
 

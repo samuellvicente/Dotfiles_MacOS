@@ -19,7 +19,8 @@ local PKGS = {
   "onsails/lspkind-nvim";
   --"ukas-reineke/cmp-under-comparator";
   --"hrsh7th/cmp-nvim-lua";
-  --"saadparwaiz1/cmp_luasnip";
+  "saadparwaiz1/cmp_luasnip";
+  "L3MON4D3/LuaSnip";
 
 
   -- Treesitter plugins

@@ -11,6 +11,11 @@ if not cmp_status_ok then
   return
 end
 
+local cmp_status_ok, luasnip = pcall(require, "luasnip")
+if not cmp_status_ok then
+  return
+end
+
 
 -- Global setup
 cmp.setup({
@@ -44,7 +49,7 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "buffer", keyword_length = 3},
     { name = "path" },
-    --{ name = "luasnip" },
+    { name = "luasnip" },
   },
 
 
@@ -100,11 +105,11 @@ cmp.setup({
 
 
   -- Snippets
-  --snippet = {
-  --  expand = function(args)
-  --    luasnip.lsp_expand(args.body) -- For `luasnip` users.
-  --  end,
-  --},
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body) -- For `luasnip` users.
+    end,
+  },
 })
 
 

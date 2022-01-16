@@ -25,20 +25,20 @@ yabai -m config mouse_action2                resize
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  50
-yabai -m config bottom_padding               50
-yabai -m config left_padding                 50
-yabai -m config right_padding                50
-yabai -m config window_gap                   50
+yabai -m config top_padding                  40
+yabai -m config bottom_padding               40
+yabai -m config left_padding                 40
+yabai -m config right_padding                40
+yabai -m config window_gap                   40
 
 # Float Windows
 yabai -m rule --add app=Finder manage=off
-yabai -m rule --add app=MacPass manage=off sticky=on window --grid 4:8:5:1:8:2
+#yabai -m rule --add app=MacPass manage=off sticky=on window --grid 4:8:5:1:8:2
 yabai -m rule --add app=System Preferences manage=off
-yabai -m rule --add app=The\ Unarchiver manage=off
+#yabai -m rule --add app=The\ Unarchiver manage=off
 yabai -m rule --add app=System\ Preferences manage=off
-yabai -m rule --add app=python3 manage=off
-yabai -m rule --add app="^mpv$" border=off
+#yabai -m rule --add app=python3 manage=off
+#yabai -m rule --add app="^mpv$" border=off
 
 #Display 1
 yabai --add event=application_launched action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"left-coffee\"'"

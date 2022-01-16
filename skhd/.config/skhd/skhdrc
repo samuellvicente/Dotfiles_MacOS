@@ -147,6 +147,9 @@ alt - s : yabai -m window --toggle float;\
 alt - g : yabai -m space --toggle gap;\
           yabai -m space --toggle padding
 
+# toggle border for application
+alt - b : yabai -m window --toggle border;
+
 # toggle sticky(+float), topmost, picture-in-picture FIXME: bugged
 #alt - p : yabai -m window --toggle sticky;\
 #      yabai -m window --toggle topmost;\

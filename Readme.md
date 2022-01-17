@@ -1,6 +1,7 @@
 # Dotfiles
 
-![](./dotfiles.png)
+![tmux, nvim, firefox](1.png)
+![vifm, mpv](2.png)
 
 ## Programs
 

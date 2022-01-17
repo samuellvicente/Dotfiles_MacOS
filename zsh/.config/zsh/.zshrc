@@ -63,7 +63,8 @@ zmodload zsh/complist
 compinit -d $ZCACHE/.zcompdump
 # Include hidden files.
 _comp_options+=(globdots)		
-
+# case insensitive path-completion 
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
 # vi mode
 bindkey -v
 KEYTIMEOUT=1

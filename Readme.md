@@ -7,6 +7,7 @@
 * Karabiner-Elements
 * Kitty
 * Mpv
+* Nvim
 * Skhd
 * Spotify-TUI
 * Spotifyd

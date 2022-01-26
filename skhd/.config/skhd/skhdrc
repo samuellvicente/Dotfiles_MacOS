@@ -1,11 +1,11 @@
+# open terminal window
 cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~
+
+# 
 cmd - j : open "https://duckduckgo.com/?q=$(pbpaste)"
 cmd - h : open "$(pbpaste)"
 cmd - k : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ zsh --login -c vifm
-
-
-cmd - u : open -a Google\ Chrome "https://meet.jit.si/MassiveMethodologiesFaceEfficiently"
-cmd - i : open -a Google\ Chrome "https://meet.jit.si/lmaovaimceoianpedjaw"
+cmd - i : open "https://meet.jit.si/samuelvicente2022" && echo "https://meet.jit.si/samuelvicente2022" | pbcopy
 
 
 # focus window

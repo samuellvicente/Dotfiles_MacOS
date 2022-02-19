@@ -104,7 +104,7 @@ preexec() { echo -ne '\e[5 q' ;}
 # Launch vifm in the current directory
 bindkey -s '^o' 'vifm . ^M'
 
-# Edit line in vim with ctrl-e:
+# Edit line in editor with ctrl-e:
 autoload edit-command-line
 zle -N edit-command-line
 bindkey '^e' edit-command-line

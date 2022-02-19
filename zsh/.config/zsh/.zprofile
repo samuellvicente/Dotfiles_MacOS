@@ -14,3 +14,7 @@ export PATH="/usr/local/sbin:$PATH"
 # Add GOPATH to PATH
 export GOPATH="$HOME/.go"
 export PATH="$GOPATH/bin:$PATH"
+
+# Add java to PATH
+export JAVA_HOME="/usr/local/opt/openjdk@11"
+export PATH="$JAVA_HOME/bin:$PATH"

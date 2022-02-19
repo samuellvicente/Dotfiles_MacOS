@@ -38,6 +38,9 @@ keymap("n", "<leader>tl", ":set list!<CR>", opts)
 keymap("n", "<C-n>", ":bnext<CR>", opts)
 keymap("n", "<C-p>", ":bprevious<CR>", opts)
 
+-- reload config
+
+keymap("n", "<leader>rlc", ":source $MYVIMRC <CR>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -54,3 +57,4 @@ vim.cmd [[ command WQ wq ]]
 vim.cmd [[ command Wq wq ]]
 vim.cmd [[ command W w ]]
 vim.cmd [[ command Q q ]]
+

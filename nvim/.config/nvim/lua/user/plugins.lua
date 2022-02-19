@@ -22,7 +22,6 @@ local PKGS = {
   "saadparwaiz1/cmp_luasnip";
   "L3MON4D3/LuaSnip";
 
-
   -- Treesitter plugins
   { "nvim-treesitter/nvim-treesitter", run = function() cmd 'TSUpdate' end };
   "p00f/nvim-ts-rainbow";

@@ -10,7 +10,7 @@ require 'user/plugins'
 -- Add colorscheme
 local status_ok, color = pcall(require, "user/colorscheme")
 if status_ok then
-  color.DARK()
+  color.LIGHT()
 end
 
 

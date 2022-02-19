@@ -39,7 +39,8 @@ vim.opt.sidescrolloff = 8                       -- same but for side scroll
 vim.opt.inccommand = "split"
 vim.opt.hidden = true                           -- enable hidden buffers
 vim.opt.autoread = true                         -- auto update file
-vim.opt.showbreak = "↪ "                        -- show line breaks
+vim.opt.showbreak = "↴ "                         -- show line breaks
+--vim.opt.showbreak = "↪ "                         -- show line breaks
 vim.opt.listchars = "tab:→ ,nbsp:·,trail:×,extends:›,precedes:‹"
 vim.opt.list = true                             -- show hidden chars
 

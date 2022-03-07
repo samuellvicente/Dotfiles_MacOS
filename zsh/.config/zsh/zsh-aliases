@@ -19,7 +19,9 @@ alias s='kitty +kitten ssh'
 alias t='tmux a || tmux'
 alias icat='kitty +kitten icat'
 alias wget='wget --no-hsts'
-
+f() {
+  find ${1}
+}
 # Quick jump for recent directories
 alias d='dirs -v'
 for index ({0..9}) alias "$index"="cd +${index}"; unset index

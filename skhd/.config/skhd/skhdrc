@@ -6,7 +6,7 @@ cmd - j : open "https://duckduckgo.com/?q=$(pbpaste)"
 cmd - h : open "$(pbpaste)"
 cmd - k : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ zsh --login -c vifm
 cmd - i : open "https://meet.jit.si/samuelvicente2022" && echo "https://meet.jit.si/samuelvicente2022" | pbcopy
-cmd - t : /Users/samuelvicente/.scripts/theme.sh
+cmd - m : /Users/samuelvicente/.scripts/theme.sh
 
 # focus window
 alt - h : yabai -m window --focus west

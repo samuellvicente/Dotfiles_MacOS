@@ -184,8 +184,8 @@ filetype *.djvu open -a MacDjView.app
 
 " Audio
 filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus
-       \ {Play using MPlayerX}
-       \ open -a MPlayerX.app,
+       \ {Play using MPV}
+       \ open -a mpv.app,
        \ {Open in iTunes}
        \ open -a iTunes.app,
        \ {Open in QuickTime Player}

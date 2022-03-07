@@ -7,7 +7,6 @@ local PKGS = {
 
   -- LSP
   "neovim/nvim-lspconfig";
-  --"williamboman/nvim-lsp-installer";
 
 
   -- Completion plugins
@@ -22,10 +21,12 @@ local PKGS = {
   "saadparwaiz1/cmp_luasnip";
   "L3MON4D3/LuaSnip";
 
+
   -- Treesitter plugins
   { "nvim-treesitter/nvim-treesitter", run = function() cmd 'TSUpdate' end };
   "p00f/nvim-ts-rainbow";
   --"windwp/nvim-ts-autotag";
+
 
 
   -- Random stuff

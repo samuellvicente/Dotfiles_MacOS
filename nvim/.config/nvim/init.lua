@@ -25,3 +25,6 @@ require 'user/treesitter'
 
 -- Add lsp
 require 'user/lsp'
+
+-- Add NeOrg
+require 'user/neorg'

@@ -4,6 +4,8 @@
 -- Packages to be managed
 local PKGS = {
   "savq/paq-nvim";
+  "nvim-lua/plenary.nvim";
+
 
   -- LSP
   "neovim/nvim-lspconfig";
@@ -26,6 +28,9 @@ local PKGS = {
   { "nvim-treesitter/nvim-treesitter", run = function() cmd 'TSUpdate' end };
   "p00f/nvim-ts-rainbow";
   --"windwp/nvim-ts-autotag";
+  
+  -- NeOrg
+  "nvim-neorg/neorg";
 
 
 

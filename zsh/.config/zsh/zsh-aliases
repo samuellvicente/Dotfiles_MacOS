@@ -15,6 +15,7 @@ alias diff='nvim -d'
 
 # General aliases
 alias v='$EDITOR'
+alias org='$EDITOR +:NeorgStart'
 alias s='kitty +kitten ssh'
 alias t='tmux a || tmux'
 alias icat='kitty +kitten icat'

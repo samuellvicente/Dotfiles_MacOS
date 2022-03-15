@@ -3,6 +3,7 @@ cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d
 
 # 
 cmd - j : open "https://duckduckgo.com/?q=$(pbpaste)"
+cmd - s : open -a Chromium "https://scholar.google.com/scholar?q=$(pbpaste)"
 cmd - h : open "$(pbpaste)"
 cmd - k : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ zsh --login -c vifm
 cmd - i : open "https://meet.jit.si/samuelvicente2022" && echo "https://meet.jit.si/samuelvicente2022" | pbcopy

@@ -52,7 +52,15 @@ if not status_ok then
   return
 end
 
-
+lspconfig.ltex.setup {
+   on_attach = custom_attach,
+   capabilities = capabilities,
+   flags = {
+     debounce_text_changes = 150,
+   },
+  cmd = { "ltex-ls" },
+  filetypes = { "bib", "gitcommit", "markdown", "plaintex", "norg", "tex" },
+}
 -- Setup global options
 --local servers = { 'ccls' }
 --for _, lsp in ipairs(servers) do

@@ -8,6 +8,11 @@ m(){
   (mpv $@ &) >/dev/null 2>&1
 }
 
+# open mpv without hassle
+jarback(){
+  (java -jar $@ &) >/dev/null 2>&1
+}
+
 # kubectl
 #k(){
 #        kubectl $@

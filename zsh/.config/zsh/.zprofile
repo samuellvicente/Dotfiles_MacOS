@@ -18,3 +18,6 @@ export PATH="$GOPATH/bin:$PATH"
 # Add java to PATH
 export JAVA_HOME="/usr/local/opt/openjdk@11"
 export PATH="$JAVA_HOME/bin:$PATH"
+
+# Dbus for zathura synctex
+export DBUS_SESSION_BUS_ADDRESS='unix:path='$DBUS_LAUNCHD_SESSION_BUS_SOCKET

@@ -20,12 +20,12 @@ configs.setup {
     ["core.norg.dirman"] = {
       config = {
         workspaces = {
-          thesis = "~/Documents/Agenda/thesis",
+          thesis = "~/Documents/IST/Thesis/neorg",
           personal = "~/Documents/Agenda/personal",
         },
         autochdir = true,
         autodetect = true,
-        default_workspace = "personal",
+        default_workspace = "thesis",
       }
     },
     ["core.norg.esupports.metagen"] = {

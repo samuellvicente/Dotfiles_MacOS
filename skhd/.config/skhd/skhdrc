@@ -1,13 +1,13 @@
 # open terminal window
 cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~
 
-cmd - j : open "https://duckduckgo.com/?q=$(pbpaste)"
+cmd - j : open -a Chromium "https://duckduckgo.com/?q=$(pbpaste)"
 cmd - s : open -a Chromium "https://scholar.google.com/scholar?q=$(pbpaste)"
 cmd - h : open "$(pbpaste)"
 cmd - k : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ zsh --login -c vifm
 cmd - i : open "https://meet.jit.si/samuelvicente2022" && echo "https://meet.jit.si/samuelvicente2022" | pbcopy
 cmd - m : /Users/samuelvicente/.scripts/theme.sh
-cmd - o : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~/Documents/Agenda/thesis/ zsh --login -c nvim\ index.norg
+cmd - o : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~/Documents/IST/Thesis/neorg/ zsh --login -c nvim\ index.norg
 
 # focus window
 alt - h : yabai -m window --focus west

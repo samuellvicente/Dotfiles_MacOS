@@ -169,18 +169,36 @@ command! reload :write | restart
 " program.
 
 " Pdf
-filetype *.pdf
-       \ {Open in Preview}
-       \ open -a Preview.app,
-       \ {Open in Skim}
-       \ open -a Skim.app,
-fileviewer *.pdf pdftotext -nopgbrk %c -
+filetype *.pdf zathura %f &
+fileview *.pdf pdftotext -nopgbrk %c -
 
 " PostScript
-filetype *.ps,*.eps open -a Preview.app
+filextype {*.ps,*.eps,*.ps.gz},<application/postscript>
+        \ {View in zathura}
+        \ zathura %f,
+        \ {View in gv}
+        \ gv %c %i &,
 
 " Djvu
-filetype *.djvu open -a MacDjView.app
+filextype {*.djvu},<image/vnd.djvu>
+        \ {View in zathura}
+        \ zathura %f,
+        \ {View in apvlv}
+        \ apvlv %f,
+
+"" Pdf
+"filetype *.pdf
+"       \ {Open in Preview}
+"       \ open -a Preview.app,
+"       \ {Open in Skim}
+"       \ open -a Skim.app,
+"fileviewer *.pdf pdftotext -nopgbrk %c -
+"
+"" PostScript
+"filetype *.ps,*.eps open -a Preview.app
+"
+"" Djvu
+"filetype *.djvu open -a MacDjView.app
 
 " Audio
 filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus

@@ -114,11 +114,9 @@ cmp.setup({
 
 
   -- Documentation box look
-  documentation = {
-    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-    scrollbar = "║",
+  window = {
+    documentation = cmp.config.window.bordered()
   },
-
 
   -- Experimental
   experimental = {
@@ -148,6 +146,6 @@ cmp.setup.cmdline(':', {
   sources = cmp.config.sources({
     { name = 'path' }
   }, {
-    { name = 'cmdline', keyword_length = 3 }
-  })
+      { name = 'cmdline', keyword_length = 3 }
+    })
 })

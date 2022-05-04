@@ -10,8 +10,11 @@ sed -i -n 's/1d2021/f9f5d7/
 t
 s/f9f5d7/1d2021/' /Users/samuelvicente/.config/zathura/zathurarc;
 
-ps ax | grep "Kitty.app" | awk 'NR==1 {print$1}' | xargs kill -USR1;
-
 osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to not dark mode';
 
+ps ax | grep "Kitty.app" | awk 'NR==1 {print$1}' | xargs kill -USR1;
 
+for socket in $(nvr --serverlist);
+do
+  nvr --servername $socket --remote-send '<esc>:source $MYVIMRC<CR>'&
+done

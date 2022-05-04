@@ -30,6 +30,11 @@ BEGIN {
     $3=$NF=$(NF-1)="";
     r=$0
   }
+  else if ($3 ~ /zathura/){
+    $3=$NF="";
+    gsub(".*/", "", $0);
+    r=$0
+  }
   else if ($3 ~ /KeePassXC/){
     $0 ~ "Locked" ? $3=$NF=$(NF-1)=$(NF-2)="" : $3=$NF=$(NF-1)="";
     r=$0

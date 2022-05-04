@@ -7,6 +7,7 @@ refreshFrequency: 500
 style: """
   top: 1px
   left: 1px
+  right: 260px
   color: #0e1610
 
   .output

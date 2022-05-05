@@ -14,7 +14,9 @@ osascript -e 'tell app "System Events" to tell appearance preferences to set dar
 
 ps ax | grep "Kitty.app" | awk 'NR==1 {print$1}' | xargs kill -USR1;
 
-for socket in $(nvr --serverlist);
+
+
+for socket in $(lsof -U | grep nvim | awk '{print $NF}');
 do
-  nvr --servername $socket --remote-send '<esc>:source $MYVIMRC<CR>'&
+  nvim --server $socket --remote-send '<esc>:source $MYVIMRC<CR>'&
 done

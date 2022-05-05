@@ -9,3 +9,15 @@ augroup _general_settings
 
 augroup end
 ]]
+
+local latex = vim.api.nvim_create_augroup("_latex-settings", {
+  clear = true
+})
+
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+  pattern = {"*.tex", "*.bib"},
+  callback = function()
+    vim.wo.colorcolumn = ""
+  end,
+  group = latex,
+})

@@ -10,6 +10,16 @@ augroup _general_settings
 augroup end
 ]]
 
+vim.cmd [[
+augroup _save_folds
+  autocmd!
+
+    autocmd BufWinLeave *.tex mkview
+    autocmd BufWinEnter *.tex silent loadview 
+
+augroup end
+]]
+
 local latex = vim.api.nvim_create_augroup("_latex-settings", {
   clear = true
 })
@@ -17,7 +27,9 @@ local latex = vim.api.nvim_create_augroup("_latex-settings", {
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
   pattern = {"*.tex", "*.bib"},
   callback = function()
-    vim.wo.colorcolumn = ""
+    vim.wo.colorcolumn = "";
+    vim.api.nvim_command('set spell spelllang=en_us');
+    vim.o.foldmethod = 'indent';
   end,
   group = latex,
 })

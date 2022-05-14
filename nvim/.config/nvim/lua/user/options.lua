@@ -12,7 +12,7 @@ vim.opt.mouse = "a"                             -- allow the mouse to be used in
 vim.opt.pumheight = 10                          -- pop up menu height
 vim.opt.showmode = true                         -- show things like -- INSERT -- 
 vim.opt.showtabline = 1                         -- show tabs when more than one
-vim.opt.smartindent = true                      -- make indenting smarter again
+vim.opt.smartindent = false                      -- make indenting smarter again
 vim.opt.splitbelow = true                       -- force all horizontal splits to go below current window
 vim.opt.splitright = true                       -- force all vertical splits to go to the right of current window
 vim.opt.swapfile = false                        -- creates a swapfile
@@ -39,9 +39,10 @@ vim.opt.sidescrolloff = 8                       -- same but for side scroll
 vim.opt.inccommand = "split"
 vim.opt.hidden = true                           -- enable hidden buffers
 vim.opt.autoread = true                         -- auto update file
-vim.opt.showbreak = "↴ "                         -- show line breaks
+--vim.opt.showbreak = "↴ "                         -- show line breaks
 --vim.opt.showbreak = "↪ "                         -- show line breaks
 vim.opt.listchars = "tab:→ ,nbsp:·,trail:×,extends:›,precedes:‹"
+--vim.opt.listchars = "trail:×"
 vim.opt.list = true                             -- show hidden chars
 
 vim.cmd('set nostartofline')
@@ -49,3 +50,8 @@ vim.cmd('set nostartofline')
 
 -- vim.cmd [[set iskeyword+=-]]                 -- which chars constitute a word
 -- vim.cmd [[set formatoptions-=cro]]           -- TODO: Look into this in the future
+--
+
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.cmd('set nofoldenable')

@@ -58,3 +58,6 @@ vim.cmd [[ command Wq wq ]]
 vim.cmd [[ command W w ]]
 vim.cmd [[ command Q q ]]
 
+
+-- should go to autocmd latex
+keymap("n", "<leader>op", ":silent !zathura %:t:r.pdf & <cr>",opts);

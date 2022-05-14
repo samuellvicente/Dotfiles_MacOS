@@ -50,6 +50,7 @@ if not status_ok then
 end
 
 local capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local status_ok, lspconfig = pcall(require, "lspconfig")
@@ -287,7 +288,7 @@ lspconfig.texlab.setup {
       build = {
         args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
         executable = "latexmk",
-        forwardSearchAfter = true,
+        forwardSearchAfter = false,
         onSave = true,
       },
       chktex = {

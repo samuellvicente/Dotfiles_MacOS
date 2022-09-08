@@ -1,14 +1,14 @@
 # Kitty
-super + Return
+{alt, mod5} + Return
 	kitty
 
 # Vifm
-alt + ctrl + k
+mod5 + k
 	kitty --single-instance -d ~ zsh --login -c vifm
 
 # Firefox
-alt + ctrl + f
-	firefox -new-window about:newtab
+mod5 + f
+	/opt/firefox/firefox -new-window about:newtab
 
 # program launcher
 alt + @space
@@ -18,6 +18,18 @@ alt + @space
 super + Escape
 	pkill -USR1 -x sxhkd
 
+
+
+XF86MonBrightness{Up,Down}
+  brightnessctl s 2400{+,-}
+
+XF86Audio{Raise,Lower}Volume
+   amixer -D pulse sset Master 3%{+,-}
+
+XF86AudioMute
+  amixer -D pulse sset Master toggle
+
+
 #
 # bspwm hotkeys
 #
@@ -26,13 +38,16 @@ super + Escape
 #super + alt + {q,r}
 	#bspc {quit,wm -r}
 
+alt + b
+  bspc config window_gap                    {0,20}
+
 # close and kill
 alt + {_,shift + }q
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
-#super + m
-#	bspc desktop -l next
+super + m
+	bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
 super + y
@@ -131,3 +146,7 @@ alt + shift {d,w,s,a}
 # move a floating window
 shift + ctrl {h,j,k,l}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+super + e
+  bspc node @parent -R 90
